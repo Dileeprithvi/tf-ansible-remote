@@ -94,9 +94,9 @@ resource "aws_security_group" "webSG" {
 #outputs
 
 output "TestInstance1_pub_ip" {
-    value = "${aws_instance.TestInstance1.public_ip}"
+    value = "${aws_instance.TestInstance1.0.public_ip}"
 }
 
 output "TestInstance1_id" {
-    value = "${aws_instance.TestInstance1.id}"
+    value = "${aws_instance.TestInstance1.0.id}"
 }
