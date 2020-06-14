@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Install httpd
+    yum:
+      name: httpd
+      state: installed
+  - name: start service
+    service: 
+       name: httpd
+       state: started
