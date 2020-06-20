@@ -40,10 +40,9 @@ resource "aws_instance" "TestInstance1" {
   #provisioners - remote-exec 
   provisioner "remote-exec" {
     inline = [
-      "sudo amazon-linux-extras install  ansible2 -y",
-      "sleep 10s",
-      "sudo ansible-playbook -i localhost /tmp/playbook.yaml",
-      "sudo chmod 657 /var/www/html"
+      "sudo yum install httpd -y",
+      "sudo systemctl start httpd",
+      "sudo systemctl enable httpd"
     ]
     
   }
