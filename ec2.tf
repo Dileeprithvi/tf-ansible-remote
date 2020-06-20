@@ -32,17 +32,15 @@ resource "aws_instance" "TestInstance1" {
   #provisioners - remote-exec 
   provisioner "remote-exec" {
     inline = [
-      "sudo yum install httpd -y",
-      "sudo systemctl start httpd",
-      "sudo systemctl enable httpd",
-      "sudo cp /var/tmp/index.html /var/www/html/index.html"
+      "chmod +x /var/tmp/httpd.sh",
+      "/tmp/httpd.sh"
     ]
     
   }
 
   provisioner "file" {
-  source      = "index.html"
-  destination = "/var/tmp/index.html"
+  source      = "httpd.sh"
+  destination = "/var/tmp/httpd.sh"
   }
   }
 
