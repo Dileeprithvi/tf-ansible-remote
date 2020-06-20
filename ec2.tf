@@ -32,7 +32,7 @@ resource "aws_instance" "TestInstance1" {
   #provisioners - remote-exec 
   provisioner "remote-exec" {
     inline = [
-      "chmod +x /var/tmp/httpd.sh",
+      "chmod +x /tmp/httpd.sh",
       "/tmp/httpd.sh"
     ]
     
@@ -40,7 +40,7 @@ resource "aws_instance" "TestInstance1" {
 
   provisioner "file" {
   source      = "httpd.sh"
-  destination = "/var/tmp/httpd.sh"
+  destination = "/tmp/httpd.sh"
   }
   }
 
