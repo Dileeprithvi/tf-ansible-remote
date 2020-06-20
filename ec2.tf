@@ -28,15 +28,7 @@ resource "aws_instance" "TestInstance1" {
     private_key = "${file("awskey1.pem")}"
   }
 
-  
-#provisioners - File 
    
-  provisioner "file" {
-    source      = "playbook.yaml"
-    destination = "/tmp/playbook.yaml"
-
- }
-
   #provisioners - remote-exec 
   provisioner "remote-exec" {
     inline = [
