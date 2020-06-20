@@ -40,9 +40,9 @@ resource "aws_instance" "TestInstance1" {
     
   }
   
-    provisioner "file" {
-    source      = "index.html"
-    destination = "/var/tmp/index.html"
+  provisioner "file" {
+  source      = "index.html"
+  destination = "/var/tmp/index.html"
 
  }
   }
