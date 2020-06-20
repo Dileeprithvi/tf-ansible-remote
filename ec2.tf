@@ -37,7 +37,7 @@ resource "aws_instance" "TestInstance1" {
   provisioner "remote-exec" {
     inline = [
       "chmod +x /tmp/httpd.sh",
-      "sudo /tmp/httpd.sh args"
+      "sudo /tmp/httpd.sh"
     ]
     } 
   }
