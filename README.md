@@ -8,15 +8,15 @@
 
 # Terraform Commands
 
-1. $terraform version
-2. $terraform init
-3. $terraform plan
-4. $terraform apply
-5. $terraform show
-6. $terraform destroy
+* $terraform version
+* $terraform init
+* $terraform plan
+* $terraform apply
+* $terraform show
+* $terraform destroy
 
 
-# Scenario#1
+# Remote Provisioner Scenario
 
 1. Deploy AWS EC2 instance in default VPC
 2. Create Security Group  and allow port 22 & 80
