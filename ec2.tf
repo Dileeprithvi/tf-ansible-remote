@@ -35,10 +35,15 @@ resource "aws_instance" "TestInstance1" {
       "sudo yum install httpd -y",
       "sudo systemctl start httpd",
       "sudo systemctl enable httpd"
-      "echo "<h1> httpd service is running through terraform remote-provisioner </h1>" | sudo tee /var/www/html/index.html"
     ]
     
   }
+  
+    provisioner "file" {
+    source      = "index.html"
+    destination = "/var/www/html/index.html"
+
+ }
   }
 
 #resources
