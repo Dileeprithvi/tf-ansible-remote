@@ -34,7 +34,7 @@ resource "aws_instance" "TestInstance1" {
     inline = [
       "sudo yum install httpd -y",
       "sudo systemctl start httpd",
-      "sudo systemctl enable httpd"
+      "sudo systemctl enable httpd",
       "sudo cp /var/tmp/index.html /var/www/html/index.html"
     ]
     
