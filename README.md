@@ -1,4 +1,4 @@
-Terraform Code Blocks
+# Terraform Code Blocks
 
 1. Provider
 2. Resource
@@ -6,7 +6,7 @@ Terraform Code Blocks
 4. Variable
 5. Output
 
-Terraform Commands
+# Terraform Commands
 
 1. $terraform version
 2. $terraform init
@@ -16,8 +16,8 @@ Terraform Commands
 6. $terraform destroy
 
 
-Scenario#1
+# Scenario#1
 
 1. Deploy AWS EC2 instance in default VPC
 2. Create Security Group  and allow port 22 & 80
-3. Run Ansible Playbook to  install and  configure Apache httpd
+3. Run httpd and validate the webserver is running in the web browser
