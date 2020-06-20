@@ -28,7 +28,11 @@ resource "aws_instance" "TestInstance1" {
     private_key = "${file("awskey1.pem")}"
   }
 
-   
+  provisioner "file" {
+  source      = "httpd.sh"
+  destination = "/tmp/httpd.sh"
+  }
+
   #provisioners - remote-exec 
   provisioner "remote-exec" {
     inline = [
@@ -36,12 +40,6 @@ resource "aws_instance" "TestInstance1" {
       "/tmp/httpd.sh"
     ]
     
-  }
-
-  provisioner "file" {
-  source      = "httpd.sh"
-  destination = "/tmp/httpd.sh"
-  }
   }
 
 #resources
