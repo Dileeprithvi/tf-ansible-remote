@@ -35,13 +35,14 @@ resource "aws_instance" "TestInstance1" {
       "sudo yum install httpd -y",
       "sudo systemctl start httpd",
       "sudo systemctl enable httpd"
+      "
     ]
     
   }
   
     provisioner "file" {
     source      = "index.html"
-    destination = "/var/www/html/index.html"
+    destination = "/var/tmp/"
 
  }
   }
